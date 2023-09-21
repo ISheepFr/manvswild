@@ -1,0 +1,25 @@
+		
+	*************************************************
+	*						*
+	*	Ajout d'un nouvel élément de jeu	*
+	*						*
+	*************************************************
+
+Voir à quel type d'élément il correspond (Obstacle, Animal Sauvage, Joueur)
+Si jamais il ne correspond à aucun de ces types, faire hériter la classe du nouvel élément de la classe mère gameElement
+Sinon la faire hériter de la classe correspondant au type
+
+Dans la classe field.h :
+ - Ajouter le caractère correspondant à l'élément dans le tableau d_gameElement
+ - Ajouter le nom complet de l'élément dans le tableau d_gameElementString
+
+Dans la classe field.cpp :
+	Méthode createField : rajouter un bloc de code dans le switch/case correspondant au nouvel élément
+	Méthode importMap : rajouter un bloc de code dans le switch/case avec le caractère du nouvel élément
+
+Toujours dans la classe field.cpp, en fonction de si vous ajoutez un fauve ou un joueur, vous devrez gérer la position : 
+  - Ajouter une méthode getNewGameElement() (adaptée au nom du nouvel élément de jeu), pour récupérer votre élément sur le terrain.
+    Cette méthode peut s'inspirer des méthodes existantes.
+  - Ajouter une méthode setNewGameElementInField() (adaptée au nom du nouvel élément de jeu), pour placer correctement votre élément 
+    sur le terrain. Cette méthode peut s'inspirer des méthodes existantes.
+Il ne vous restera plus qu'à créer votre élément avec ses particularités de déplacements ou si c'est un obstacle, ses attributs défensifs !
